@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superior Med - Schedule</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar with tabs -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <div class="logo">Superior Med</div>
+        </div>
+        <ul class="tabs">
+            <li class="tab-item">
+                <a href="index.html" class="tab-link">
+                    <span class="tab-icon">🏠</span>
+                    <span class="tab-text">Home</span>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="about.html" class="tab-link">
+                    <span class="tab-icon">ℹ️</span>
+                    <span class="tab-text">About Us</span>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="faq.html" class="tab-link">
+                    <span class="tab-icon">❓</span>
+                    <span class="tab-text">FAQ</span>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="schedule.html" class="tab-link active">
+                    <span class="tab-icon">📅</span>
+                    <span class="tab-text">Schedule</span>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="contact.html" class="tab-link">
+                    <span class="tab-icon">📞</span>
+                    <span class="tab-text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content">
+        <h1 class="page-title">Schedule an Appointment</h1>
+        
+        <div class="card">
+            <h2 class="card-title">Book Your Visit</h2>
+            <div class="card-content">
+                <p>Please complete the form below to request an appointment. Our staff will contact you within 1 business day to confirm your appointment time.</p>
+                <p>For urgent matters, please call our office directly at (555) 123-4567.</p>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label" for="name">Full Name:</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address:</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="date">Preferred Date:</label>
+                        <input type="date" id="date" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="time">Preferred Time:</label>
+                        <select id="time" class="form-select" required>
+                            <option value="">Select a time</option>
+                            <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                            <option value="afternoon">Afternoon (1:00 PM - 5:00 PM)</option>
+                            <option value="evening">Evening (5:00 PM - 7:00 PM) - Tues/Thurs only</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="reason">Reason for Visit:</label>
+                        <select id="reason" class="form-select" required>
+                            <option value="">Select a reason</option>
+                            <option value="annual">Annual Physical</option>
+                            <option value="followup">Follow-up Appointment</option>
+                            <option value="illness">Illness or Injury</option>
+                            <option value="chronic">Chronic Disease Management</option>
+                            <option value="vaccine">Vaccination</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="notes">Additional Notes:</label>
+                        <textarea id="notes" class="form-textarea"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">
+                            <input type="checkbox" required> I understand that this is a request form and my appointment is not confirmed until I receive confirmation from Superior Med.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn">Submit Request</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-title">Our Schedule</h2>
+            <div class="card-content">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Hours</th>
+                            <th>Special Services</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>8:00 AM - 5:00 PM</td>
+                            <td>Lab Work, Pediatrics</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>8:00 AM - 7:00 PM</td>
+                            <td>Women's Health, Mental Health</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>8:00 AM - 5:00 PM</td>
+                            <td>Chronic Disease Management</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>8:00 AM - 7:00 PM</td>
+                            <td>Geriatric Care, Vaccinations</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>8:00 AM - 5:00 PM</td>
+                            <td>Physical Exams, Preventive Care</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>9:00 AM - 12:00 PM</td>
+                            <td>Urgent Care, Walk-ins</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Closed</td>
+                            <td>Emergency: Call (555) 999-8888</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

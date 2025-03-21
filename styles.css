@@ -1,0 +1,223 @@
+/* Color Theme Variables */
+:root {
+    --primary-color: #8BC34A;     /* Main green */
+    --light-green: #C5E1A5;       /* Light green for backgrounds */
+    --lighter-green: #E8F5E9;     /* Very light green for content areas */
+    --dark-green: #689F38;        /* Darker green for active elements */
+    --text-color: #33691E;        /* Dark green for text */
+    --secondary-text: #555;       /* Gray for secondary text */
+    --white: #FFFFFF;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--lighter-green);
+    color: var(--secondary-text);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 240px;
+    background-color: var(--white);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.logo-container {
+    padding: 0 20px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--light-green);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.tabs {
+    list-style: none;
+}
+
+.tab-item {
+    margin-bottom: 5px;
+}
+
+.tab-link {
+    display: block;
+    padding: 15px 20px;
+    color: var(--secondary-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.tab-link:hover {
+    background-color: var(--lighter-green);
+    border-left-color: var(--primary-color);
+}
+
+.tab-link.active {
+    background-color: var(--light-green);
+    color: var(--text-color);
+    border-left-color: var(--dark-green);
+    font-weight: bold;
+}
+
+.tab-icon {
+    margin-right: 10px;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    margin-left: 240px;
+    padding: 30px;
+    width: calc(100% - 240px);
+}
+
+.page-title {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.card-content {
+    line-height: 1.6;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--dark-green);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.form-input, 
+.form-textarea, 
+.form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* FAQ Styles */
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.faq-answer {
+    line-height: 1.6;
+}
+
+/* Schedule Styles */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.schedule-table th {
+    background-color: var(--light-green);
+    color: var(--text-color);
+}
+
+.schedule-table tr:hover {
+    background-color: var(--lighter-green);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+        padding: 20px 0;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .tab-text {
+        display: none;
+    }
+
+    .tab-link {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .tab-icon {
+        margin-right: 0;
+        font-size: 18px;
+    }
+
+    .main-content {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+}
