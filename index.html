@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superior Med</title>
+    <style>
+        /* Color Theme Variables */
+        :root {
+            --primary-color: #8BC34A;     /* Main green */
+            --light-green: #C5E1A5;       /* Light green for backgrounds */
+            --lighter-green: #E8F5E9;     /* Very light green for content areas */
+            --dark-green: #689F38;        /* Darker green for active elements */
+            --text-color: #33691E;        /* Dark green for text */
+            --secondary-text: #555;       /* Gray for secondary text */
+            --white: #FFFFFF;
+        }
+
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--lighter-green);
+            color: var(--secondary-text);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 240px;
+            background-color: var(--white);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .logo-container {
+            padding: 0 20px 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--light-green);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .tabs {
+            list-style: none;
+        }
+
+        .tab-item {
+            margin-bottom: 5px;
+        }
+
+        .tab-link {
+            display: block;
+            padding: 15px 20px;
+            color: var(--secondary-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .tab-link:hover {
+            background-color: var(--lighter-green);
+            border-left-color: var(--primary-color);
+        }
+
+        .tab-link.active {
+            background-color: var(--light-green);
+            color: var(--text-color);
+            border-left-color: var(--dark-green);
+            font-weight: bold;
+        }
+
+        .tab-icon {
+            margin-right: 10px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            margin-left: 240px;
+            padding: 30px;
+            width: calc(100% - 240px);
+        }
+
+        .page-title {
+            color: var(--text-color);
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .card-content {
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--dark-green);
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 70px;
+                padding: 20px 0;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .tab-text {
+                display: none;
+            }
+
+            .tab-link {
+                padding: 15px;
+                text-align: center;
+            }
+
+            .tab-icon {
+                margin-right: 0;
+                font-size: 18px;
+            }
+
+            .main-content {
+                margin-left: 70px;
+                width: calc(100% - 70px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar with tabs -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <div class="logo">Superior Med</div>
+        </div>
+        <ul class="tabs">
+            <li class="tab-item">
+                <a href="#" class="tab-link active">
+                    <span class="tab-icon">🏠</span>
+                    <span class="tab-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="#" class="tab-link">
+                    <span class="tab-icon">📋</span>
+                    <span class="tab-text">Appointments</span>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="#" class="tab-link">
+                    <span class="tab-icon">💊</span>
+                    <span class="tab-text">Prescriptions</span>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="#" class="tab-link">
+                    <span class="tab-icon">📁</span>
+                    <span class="tab-text">Medical Records</span>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="#" class="tab-link">
+                    <span class="tab-icon">👨‍⚕️</span>
+                    <span class="tab-text">Doctors</span>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="#" class="tab-link">
+                    <span class="tab-icon">🔔</span>
+                    <span class="tab-text">Notifications</span>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="#" class="tab-link">
+                    <span class="tab-icon">⚙️</span>
+                    <span class="tab-text">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content">
+        <h1 class="page-title">Welcome to Superior Med</h1>
+        
+        <div class="card">
+            <h2 class="card-title">Your Upcoming Appointments</h2>
+            <div class="card-content">
+                <p>You have no upcoming appointments scheduled. Would you like to book one?</p>
+                <br>
+                <button class="btn">Book Appointment</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-title">Recent Prescriptions</h2>
+            <div class="card-content">
+                <p>Your prescription history will appear here. Please consult with a doctor to get prescriptions.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-title">Health Tips</h2>
+            <div class="card-content">
+                <p>Stay hydrated by drinking at least 8 glasses of water daily.</p>
+                <p>Regular exercise improves both your physical and mental health.</p>
+                <p>Make sure to get 7-8 hours of sleep for optimal health.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
